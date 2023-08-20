@@ -2,8 +2,7 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
-import { registerSW } from '/src-sw.js';
-
+import { registerSW } from './register-sw';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -26,13 +25,13 @@ if (typeof editor === 'undefined') {
 }
 
 // Check if service workers are supported
-if ('serviceWorker' in navigator) {
-  // register workbox service worker
-  const workboxSW = new Workbox('/src-sw.js');
-  //workboxSW.register();
-} else {
-  console.error('Service workers are not supported in this browser.');
-}
+// if ('serviceWorker' in navigator) {
+//   // register workbox service worker
+//   const workboxSW = new Workbox('/src-ws.js');
+//   workboxSW.register();
+// } else {
+//   console.error('Service workers are not supported in this browser.');
+// }
 
 // Call registerSW method
 registerSW();
