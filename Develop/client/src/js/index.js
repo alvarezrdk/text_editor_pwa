@@ -35,3 +35,13 @@ if (typeof editor === 'undefined') {
 
 // Call registerSW method
 registerSW();
+
+window.editText = async (e) => {
+  e.preventDefault()
+  const id = parseInt(e.target.children[0].id)
+  const text = e.target.children[0].value
+    console.log(e.target.children[0].id);
+    console.log(e.target.children[0].value);
+    putDb(id, text)
+    fetchList();
+  };

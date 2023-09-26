@@ -4,8 +4,8 @@
   "description": "Just Another Text Editor",
   "private": true,
   "scripts": {
-    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "npm run build && cd server && node server.js",
+    "start": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start:ser": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "idb": "^6.1.2",
+    "idb": "^6.1.5",
     "if-env": "^1.0.4",
     "mini-css-extract-plugin": "^2.7.6"
   },
