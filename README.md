@@ -1,4 +1,4 @@
-# Weather Forecast
+# JATE Editor
 ## Description
 
 This application meets the PWA criterias, allowing to feature a number of data persistence. The application will also work in offline mode.
