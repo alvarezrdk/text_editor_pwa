@@ -28,6 +28,7 @@ module.exports = () => {
         swSrc: './src/src-sw.js',
         swDest: 'service-worker.js',
       }),
+      
     ],
 
     module: {
